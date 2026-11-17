@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Adminpanel</title>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+    <header>
+        <nav class="bg-green-800">
+            <div class="flex flex-wrap items-center">
+                <a href="index.html" class="home text-white">
+                    <img src="Images/Logogroen.png" class="h-24" alt="logo">
+                </a>
+                <ul class="font-medium flex items-center flex-1 mr-12 gap-3">
+                    <li>
+                        <a href="#" class="block py-2 px-8 text-white text-2xl" aria-current="page">Adminpanel</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-8 text-white text-medium rounded-full hover:bg-gray-800">Orders</a>
+                    </li>
+                    <li>
+                        <a href="toevoegen.html"
+                            class="block py-2 px-8 text-white text-medium rounded-full hover:bg-gray-800">Product
+                            Toevoegen</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-8 text-white text-medium bg-gray-950 rounded-full hover:bg-gray-800">Producten
+                            Beheren</a>
+                    </li>
+                    <li class="ml-auto">
+                        <a href="index.html"
+                            class="block py-2 px-8 text-white text-medium bg-gray-950 rounded-full hover:bg-gray-800">Uitloggen</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="max-w-6xl mx-auto p-8 my-8 bg-white rounded-2xl shadow-lg border border-gray-200">
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-3xl font-bold text-gray-800">Producten Beheren</h1>
+            <button id="resetBtn" class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Reset
+                naar JSON</button>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-gray-200 text-gray-700 border-b">
+                        <th class="p-3">ID</th>
+                        <th class="p-3">Afbeelding</th>
+                        <th class="p-3">Artiest</th>
+                        <th class="p-3">Album</th>
+                        <th class="p-3">Prijs</th>
+                        <th class="p-3">Formaat</th>
+                        <th class="p-3 text-right">Acties</th>
+                    </tr>
+                </thead>
+                <tbody id="productTabel" class="divide-y divide-gray-200 text-gray-800">
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <div id="editModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Artiest Bewerken</h2>
+            <form id="editForm" class="flex flex-col gap-3">
+                <input type="hidden" id="edit-id">
+
+                <label class="font-bold text-sm">Artiest:</label>
+                <input type="text" id="edit-artist" required class="p-2 border rounded-lg">
+
+                <label class="font-bold text-sm">Album:</label>
+                <input type="text" id="edit-album" required class="p-2 border rounded-lg">
+
+                <label class="font-bold text-sm">Prijs:</label>
+                <input type="text" id="edit-price" required class="p-2 border rounded-lg">
+
+                <label class="font-bold text-sm">Formaat:</label>
+                <input type="text" id="edit-format" required class="p-2 border rounded-lg">
+
+                <label class="font-bold text-sm">Afbeelding pad:</label>
+                <input type="text" id="edit-image" required class="p-2 border rounded-lg">
+
+                <div class="flex justify-end gap-3 mt-4">
+                    <button type="button" id="cancelBtn"
+                        class="px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400">Annuleren</button>
+                    <button type="submit"
+                        class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Opslaan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="adminpanel.js" defer></script>
+</body>
+
+</html>

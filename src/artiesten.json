@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "artist": "Alex Warren",
+    "album": "You be Alright kid",
+    "price": "€19.99",
+    "format": "Vinyl",
+    "image_url": "images/alex-warren.png"
+  },
+  {
+    "id": 2,
+    "artist": "Tate Mcrae",
+    "album": "So Close To What",
+    "price": "€24.99",
+    "format": "LP CD",
+    "image_url": "images/tate-mrae.png"
+  },
+  {
+    "id": 3,
+    "artist": "Noah Kahan",
+    "album": "The Great Divide",
+    "price": "€14.99",
+    "format": "Vinyl-cd",
+    "image_url": "images/noah-kahan.png"
+  },
+  {
+    "id": 4,
+    "artist": "Twenty one pilots",
+    "album": "Vessel(With bonus tracks)",
+    "price": "€29.99",
+    "format": "Vinyl Deluxe",
+    "image_url": "images/twenty-one-pilots.png"
+  },
+  {
+    "id": 5,
+    "artist": "Billie Eilish",
+    "album": "Hit Me Hard and Soft",
+    "price": "€18.50",
+    "format": "CD",
+    "image_url": "images/billie-eilish.png"
+  },
+  {
+    "id": 6,
+    "artist": "Two door Cinema club",
+    "album": "Beacon",
+    "price": "€22.00",
+    "format": "Vinyl",
+    "image_url": "Images/Two-door-cinema-club.png"
+  }
+]
